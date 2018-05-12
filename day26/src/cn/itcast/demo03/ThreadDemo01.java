@@ -1,0 +1,12 @@
+package cn.itcast.demo03;
+
+public class ThreadDemo01 {
+    public static void main(String[] args){
+        SubRunnable sr=new SubRunnable();
+        Thread t=new Thread(sr);
+        t.start();
+        for (int i=0;i<50;i++){
+            System.out.println("main..."+i);
+        }
+    }
+}
